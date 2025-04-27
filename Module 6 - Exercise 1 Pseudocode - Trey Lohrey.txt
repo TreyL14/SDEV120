@@ -1,0 +1,153 @@
+A.
+
+Start
+   Input areaCode
+   Input phoneNumber
+   Input numberOfTextMessages
+   
+   baseBill = 5.00
+   If numberOfTextMessages <= 100 Then
+      additionalCharge = 0
+   Else If numberOfTextMessages <= 300 Then
+      additionalCharge = (numberOfTextMessages - 100) * 0.03
+   Else
+      additionalCharge = (200 * 0.03) + (numberOfTextMessages - 300) * 0.02
+   EndIf
+   
+   totalBeforeTax = baseBill + additionalCharge
+   totalAfterTax = totalBeforeTax * 1.14
+   
+   Output areaCode, phoneNumber, numberOfTextMessages
+   Output totalBeforeTax
+   Output totalAfterTax
+Stop
+
+
+B.
+
+Start
+   Loop
+      Input areaCode
+      If areaCode = 0 Then
+         Exit Loop
+      EndIf
+      
+      Input phoneNumber
+      Input numberOfTextMessages
+      
+      baseBill = 5.00
+      If numberOfTextMessages <= 100 Then
+         additionalCharge = 0
+      Else If numberOfTextMessages <= 300 Then
+         additionalCharge = (numberOfTextMessages - 100) * 0.03
+      Else
+         additionalCharge = (200 * 0.03) + (numberOfTextMessages - 300) * 0.02
+      EndIf
+      
+      totalBeforeTax = baseBill + additionalCharge
+      totalAfterTax = totalBeforeTax * 1.14
+      
+      Output areaCode, phoneNumber, numberOfTextMessages
+      Output totalBeforeTax
+      Output totalAfterTax
+   EndLoop
+Stop
+
+
+C.
+
+Start
+   Loop
+      Input areaCode
+      If areaCode = 0 Then
+         Exit Loop
+      EndIf
+      
+      Input phoneNumber
+      Input numberOfTextMessages
+      
+      If numberOfTextMessages > 100 Then
+         baseBill = 5.00
+         If numberOfTextMessages <= 300 Then
+            additionalCharge = (numberOfTextMessages - 100) * 0.03
+         Else
+            additionalCharge = (200 * 0.03) + (numberOfTextMessages - 300) * 0.02
+         EndIf
+         
+         totalBeforeTax = baseBill + additionalCharge
+         totalAfterTax = totalBeforeTax * 1.14
+         
+         Output areaCode, phoneNumber, numberOfTextMessages
+         Output totalBeforeTax
+         Output totalAfterTax
+      EndIf
+   EndLoop
+Stop
+
+
+D.
+
+Start
+   Loop
+      Input areaCode
+      If areaCode = 0 Then
+         Exit Loop
+      EndIf
+      
+      Input phoneNumber
+      Input numberOfTextMessages
+      
+      baseBill = 5.00
+      If numberOfTextMessages <= 100 Then
+         additionalCharge = 0
+      Else If numberOfTextMessages <= 300 Then
+         additionalCharge = (numberOfTextMessages - 100) * 0.03
+      Else
+         additionalCharge = (200 * 0.03) + (numberOfTextMessages - 300) * 0.02
+      EndIf
+      
+      totalBeforeTax = baseBill + additionalCharge
+      totalAfterTax = totalBeforeTax * 1.14
+      
+      If totalAfterTax > 10 Then
+         Output areaCode, phoneNumber, numberOfTextMessages
+         Output totalBeforeTax
+         Output totalAfterTax
+      EndIf
+   EndLoop
+Stop
+
+
+E.
+
+Start
+   Input selectedAreaCode
+   
+   Loop
+      Input areaCode
+      If areaCode = 0 Then
+         Exit Loop
+      EndIf
+      
+      Input phoneNumber
+      Input numberOfTextMessages
+      
+      If areaCode = selectedAreaCode Then
+         baseBill = 5.00
+         If numberOfTextMessages <= 100 Then
+            additionalCharge = 0
+         Else If numberOfTextMessages <= 300 Then
+            additionalCharge = (numberOfTextMessages - 100) * 0.03
+         Else
+            additionalCharge = (200 * 0.03) + (numberOfTextMessages - 300) * 0.02
+         EndIf
+         
+         totalBeforeTax = baseBill + additionalCharge
+         totalAfterTax = totalBeforeTax * 1.14
+         
+         Output areaCode, phoneNumber, numberOfTextMessages
+         Output totalBeforeTax
+         Output totalAfterTax
+      EndIf
+   EndLoop
+Stop
